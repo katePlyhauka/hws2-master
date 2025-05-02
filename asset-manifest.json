@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/katePlyhauka/hws2-master/static/css/main.c9b2fa18.css",
-    "main.js": "/katePlyhauka/hws2-master/static/js/main.44bd8261.js",
-    "static/js/787.66cb4309.chunk.js": "/katePlyhauka/hws2-master/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/katePlyhauka/hws2-master/static/media/avatar.d947cb9d0d13765666b6.png",
-    "index.html": "/katePlyhauka/hws2-master/index.html",
-    "main.c9b2fa18.css.map": "/katePlyhauka/hws2-master/static/css/main.c9b2fa18.css.map",
-    "main.44bd8261.js.map": "/katePlyhauka/hws2-master/static/js/main.44bd8261.js.map",
-    "787.66cb4309.chunk.js.map": "/katePlyhauka/hws2-master/static/js/787.66cb4309.chunk.js.map"
+    "main.css": "/katePlyhauka/static/css/main.c9b2fa18.css",
+    "main.js": "/katePlyhauka/static/js/main.a7ba2272.js",
+    "static/js/787.66cb4309.chunk.js": "/katePlyhauka/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/katePlyhauka/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/katePlyhauka/index.html",
+    "main.c9b2fa18.css.map": "/katePlyhauka/static/css/main.c9b2fa18.css.map",
+    "main.a7ba2272.js.map": "/katePlyhauka/static/js/main.a7ba2272.js.map",
+    "787.66cb4309.chunk.js.map": "/katePlyhauka/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c9b2fa18.css",
-    "static/js/main.44bd8261.js"
+    "static/js/main.a7ba2272.js"
   ]
 }
