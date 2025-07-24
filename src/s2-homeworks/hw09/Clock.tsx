@@ -37,15 +37,23 @@ function Clock() {
         }
     }
     let formatter = new Intl.DateTimeFormat("ru", {
-        day: "numeric",
-        month: "numeric",
-        year: "numeric",
+        // day: "numeric",
+        // month: "numeric",
+        // year: "numeric",
         hour: "numeric",
         minute: "numeric",
         second: "numeric"
     })
-    const stringTime = formatter.format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = formatter.format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringTime = formatter.format(date) || <br/>
+    let formatter1 = new Intl.DateTimeFormat("ru", {
+        day: "numeric",
+        month: "numeric",
+        year: "numeric",
+        // hour: "numeric",
+        // minute: "numeric",
+        // second: "numeric"
+    })// часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringDate = formatter1.format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     let formatter2 = new Intl.DateTimeFormat('en-US', {
         weekday: 'long',
