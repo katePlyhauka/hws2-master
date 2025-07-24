@@ -26,12 +26,12 @@ function Clock() {
         clearInterval(timerId)// пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
     }
 
-    const onMouseEnter = (e: MouseEvent<HTMLElement>) => { // пишут студенты // показать дату если наведена мышка
+    const onMouseEnter = (e: React.MouseEvent<HTMLElement>) => { // пишут студенты // показать дату если наведена мышка
         if (e.target) {
             setShow(true)
         }
     }
-    const onMouseLeave = (e: MouseEvent<HTMLElement>) => { // пишут студенты // спрятать дату если мышка не наведена
+    const onMouseLeave = (e: React.MouseEvent<HTMLElement>) => { // пишут студенты // спрятать дату если мышка не наведена
         if (e.target) {
             setShow(false)
         }
