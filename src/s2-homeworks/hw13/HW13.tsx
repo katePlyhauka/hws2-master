@@ -34,44 +34,33 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
+                console.log(res.data.errorText)
                 if (res.status === 200) {
                         setCode('Код 200!')
                         setImage(success200);
-                        setText("код 200 - обычно означает что скорее всего всё ок)")
-                        setInfo('')
+                        setText(res.data.errorText)
+                        setInfo(res.data.info)
                 }
-                if (x === null) {
-                    setCode('Код null')
-                    setImage(errorUnknown);
-                    setText("null")
-                    setInfo('')
-                }
-
-                // setCode('Код 400!')
-                // setImage(error400);
-                // setText('Mistake false')
-                // setInfo('');
-                // break;// дописать
-
             })
             .catch((e) => {
                 if (x === null) {
-                    setCode('Код null')
+                    setCode('Error')
                     setImage(errorUnknown);
-                    setText("null")
-                    setInfo('')
+                    setText(e.error)
+                    setInfo(e.name)
                 }
                 if (x === false) {
+                    console.log(e)
                     setCode('Код 500!')
                     setImage(error500);
-                    setText("ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)")
-                    setInfo('')
+                    setText(e.response.data.errorText)
+                    setInfo(e.response.data.info)
                 }
                 if (x === undefined) {
                     setCode('Код 400!')
                     setImage(error400);
-                    setText("ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!")
-                    setInfo('')
+                    setText(e.response.data.errorText)
+                    setInfo(e.response.data.info)
                 }
 
                 // дописать
