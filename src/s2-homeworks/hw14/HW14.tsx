@@ -32,18 +32,27 @@ const HW14 = () => {
 
     const sendQuery = (value: string) => {
         setLoading(true)
+
         getTechs(value)
             .then((res) => {
                 // делает студент
-
+                setTechs(res?.data?.techs || [])
                 // сохранить пришедшие данные
-
+                setLoading(false)
                 //
             })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
+        console.log( value)
+        const params = new URLSearchParams(searchParams);
+        if (value) {
+            params.set('find', value);
+        } else {
+            params.delete('find');
+        }
+        setSearchParams(params);
         // делает студент
 
         // добавить/заменить значение в квери урла
@@ -56,7 +65,7 @@ const HW14 = () => {
         const params = Object.fromEntries(searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
-    }, [])
+    }, [find])
 
     const mappedTechs = techs.map(t => (
         <div key={t} id={'hw14-tech-' + t} className={s.tech}>
