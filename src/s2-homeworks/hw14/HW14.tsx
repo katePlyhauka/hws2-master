@@ -41,11 +41,11 @@ const HW14 = () => {
                 setLoading(false)
                 //
             })
+
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
-        console.log( value)
         const params = new URLSearchParams(searchParams);
         if (value) {
             params.set('find', value);
@@ -65,7 +65,7 @@ const HW14 = () => {
         const params = Object.fromEntries(searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
-    }, [find])
+    }, [searchParams])
 
     const mappedTechs = techs.map(t => (
         <div key={t} id={'hw14-tech-' + t} className={s.tech}>
