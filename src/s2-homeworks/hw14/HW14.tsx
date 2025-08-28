@@ -32,7 +32,6 @@ const HW14 = () => {
 
     const sendQuery = (value: string) => {
         setLoading(true)
-
         getTechs(value)
             .then((res) => {
                 // делает студент
@@ -41,6 +40,7 @@ const HW14 = () => {
                 setLoading(false)
                 //
             })
+
 
     }
 
@@ -53,11 +53,10 @@ const HW14 = () => {
             params.delete('find');
         }
         setSearchParams(params);
-        // делает студент
 
+        // делает студент
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
         //
     }
 
@@ -81,7 +80,7 @@ const HW14 = () => {
                 <SuperDebouncedInput
                     id={'hw14-super-debounced-input'}
                     value={find}
-                    onEnter={() => (sendQuery(find))}
+
                     onChangeText={onChangeText}
                     onDebouncedChange={sendQuery}
                 />
