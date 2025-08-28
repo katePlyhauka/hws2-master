@@ -65,7 +65,7 @@ const HW14 = () => {
         const params = Object.fromEntries(searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
-    }, [searchParams])
+    }, [])
 
     const mappedTechs = techs.map(t => (
         <div key={t} id={'hw14-tech-' + t} className={s.tech}>
@@ -81,6 +81,7 @@ const HW14 = () => {
                 <SuperDebouncedInput
                     id={'hw14-super-debounced-input'}
                     value={find}
+                    onEnter={() => (sendQuery(find))}
                     onChangeText={onChangeText}
                     onDebouncedChange={sendQuery}
                 />
