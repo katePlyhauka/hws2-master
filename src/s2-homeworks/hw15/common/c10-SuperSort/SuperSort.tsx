@@ -14,7 +14,15 @@ export type SuperSortPropsType = {
 
 export const pureChange = (sort: string, down: string, up: string) => {
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    // return up // исправить
+    if (sort === '') {
+        return down   // первый клик — вниз
+    } else if (sort === down) {
+        return up     // второй клик — вверх
+    } else if (sort === up) {
+        return ''     // третий клик — сброс
+    }
+    return ''
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (

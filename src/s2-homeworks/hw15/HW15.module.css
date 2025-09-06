@@ -1,17 +1,29 @@
 .tech {
     width: 50vw;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
 }
 
 .developer {
-
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
 }
 
 .techHeader {
     width: 50vw;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
 }
 
 .developerHeader {
-
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
 }
 
 .row {
@@ -20,8 +32,19 @@
 
 .rowHeader {
     display: flex;
+
+    background-image: url('common/img/Rectangle 511.svg');
+    width: 606px;
+    height: 36px;
+
 }
 
 .loading {
-
+    width: 100px;
+    height: 100px;
+    background-image: url('common/img/Loading.png');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
