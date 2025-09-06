@@ -1,8 +1,11 @@
 import React from 'react'
+import { ReactComponent as DownIcon } from '../img/DOWN.svg';
+import { ReactComponent as UpIcon } from '../img/UP.svg';
+
 
 // добавить в проект иконки и импортировать
-const downIcon = '[\\/]'
-const upIcon = '[/\\]'
+const downIcon = <DownIcon/>
+const upIcon = <UpIcon/>
 const noneIcon = '[--]'
 
 export type SuperSortPropsType = {
@@ -17,9 +20,9 @@ export const pureChange = (sort: string, down: string, up: string) => {
     // return up // исправить
     if (sort === '') {
         return down   // первый клик — вниз
-    } else if (sort === 'down') {
+    } else if (sort === down) {
         return up     // второй клик — вверх
-    } else if (sort === 'up') {
+    } else if (sort === up) {
         return ''     // третий клик — сброс
     }
     return ''
