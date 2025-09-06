@@ -17,9 +17,9 @@ export const pureChange = (sort: string, down: string, up: string) => {
     // return up // исправить
     if (sort === '') {
         return down   // первый клик — вниз
-    } else if (sort === down) {
+    } else if (sort === 'down') {
         return up     // второй клик — вверх
-    } else if (sort === up) {
+    } else if (sort === 'up') {
         return ''     // третий клик — сброс
     }
     return ''
